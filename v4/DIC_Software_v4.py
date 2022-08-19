@@ -882,7 +882,7 @@ class DIC_app(ttk.Frame):
 
         ttk.Label(self.canvas, text= "Browse to select the folder where the output data should be saved,"+
                  " add the name of the output file (excluding file extension) and select output options.",
-                 justify=tk.LEFT,font='bold').place(relx= .05,rely= .1,anchor= tk.W)
+                 justify=tk.LEFT,font='bold',wraplength=int(0.95*self.ww)).place(relx= .05,rely= .05,anchor= tk.W)
 
         ttk.Label(self.canvas,text='Output folder path').place(relx= .05, rely= .15, anchor= tk.W)
         ttk.Button(self.canvas, text= "Browse",
@@ -1148,10 +1148,10 @@ class DIC_app(ttk.Frame):
 
 
 
-        ttk.Label(self.canvas, text= "Click and drag on image to set known"+
-                 "\nlength and update reference length box"+
-                 "\nwith length in mm before clicking next.\n \n"+
-                 "Zoom using scroll click/right click and drag.",justify=tk.LEFT).place(relx= .77,rely= .15,
+        ttk.Label(self.canvas, text= "Click and drag on image to set known "+
+                 "length and update reference length box "+
+                 "with length in mm before clicking next.\n \n"+
+                 "Zoom using scroll click/right click and drag.",justify=tk.LEFT,wraplength=int(0.2*self.ww)).place(relx= .77,rely= .15,
                                                                                                     anchor= tk.W)
         if self.mode == 'Mobile' or self.mode == "GoPro" or self.mode=='GoPro - No LC' or self.mode=='Mobile - No LC':
             ttk.Button(self.canvas, text= "Take new reference photo",
@@ -1323,14 +1323,14 @@ class DIC_app(ttk.Frame):
         self.img_bx,self.img_by = self.image_base.size
         self.scale_image()
 
-        ttk.Label(self.canvas, text= "Click and drag on image to select"+
-                 "\narea(s) of image to track before\nclicking next.\n \n"+
+        ttk.Label(self.canvas, text= "Click and drag on image to select "+
+                 "area(s) of image to track before\nclicking next.\n \n"+
                  "Zoom using scroll click/right click and drag.\n\n"+
                  "Tips for selecting tracked areas:\n"+
                           "- Select a high contrast section of the image\n"+
-                          "- Leave a gap between the edge of the\n   tracked area and the background\n"
-                          "- Make sure the object you want to track\n   is not close to the edge of the image"
-                 ,justify=tk.LEFT).place(relx= .77,rely= .1,anchor= tk.NW)
+                          "- Leave a gap between the edge of the tracked area and the background\n"
+                          "- Make sure the object you want to track is not close to the edge of the image"
+                 ,justify=tk.LEFT,wraplength=int(0.2*self.ww)).place(relx= .77,rely= .1,anchor= tk.NW)
 
 
         ttk.Button(self.canvas, text= "Clear all tracking areas",
@@ -1419,9 +1419,9 @@ class DIC_app(ttk.Frame):
 
         self.img_bx,self.img_by = self.image_base.size
 
-        ttk.Label(self.canvas, text= "Update margins as a fraction of image"+
-                 "\ndimensions (if needed) using the boxes"+
-                 "\nbelow and the \"Update margins\" button.",justify=tk.LEFT).place(relx= .77,rely= .15,anchor= tk.W)
+        ttk.Label(self.canvas, text= "Update margins as a fraction of image "+
+                 "dimensions (if needed) using the boxes "+
+                 "below and the \"Update margins\" button.",justify=tk.LEFT,wraplength=int(0.2*self.ww)).place(relx= .77,rely= .15,anchor= tk.W)
         self.hmarg =  tk.StringVar(self.master, value=str(self.margin_x))
         self.vmarg =  tk.StringVar(self.master, value=str(self.margin_y))
 
