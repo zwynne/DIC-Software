@@ -10,3 +10,5 @@ ii) Real-time collection and analysis of GoPro/mobile phone photos and USB load 
 iii) Removal of fisheye image warping using calibration images.
 
 All software is developed in Python and converted into executable files (.exe) for use by non-technical operators. The focus is on ensuring the software is accurate, lightweight and simple to use. Currently the front-end of the software is rendered using the tkinter library. 
+
+Please see the wiki for tutorial videos and detailed guidance on using the software!
